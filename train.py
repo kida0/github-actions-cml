@@ -2,6 +2,8 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('TKAgg')
 import seaborn as sns
 import numpy as np
 
@@ -40,10 +42,13 @@ axis_fs = 18 #fontsize
 title_fs = 22 #fontsize
 sns.set(style="whitegrid")
 
+
 ax = sns.barplot(x="importance", y="feature", data=feature_df)
+
 ax.set_xlabel('Importance',fontsize = axis_fs) 
 ax.set_ylabel('Feature', fontsize = axis_fs)
 ax.set_title('Random forest\nfeature importance', fontsize = title_fs)
+
 
 plt.tight_layout()
 plt.savefig("feature_importance.png",dpi=120) 
