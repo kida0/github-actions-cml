@@ -29,7 +29,6 @@ with open("metrics.txt", 'w') as outfile:
     outfile.write("Training variance explained: %2.1f%%\n" % train_score)
     outfile.write("Test variance explained: %2.1f%%\n" % test_score)
 
-"""
 # Calculate feature importance in random forest
 importances = regr.feature_importances_
 labels = df.columns
@@ -72,4 +71,4 @@ plt.xlim((2.5,8.5))
 
 plt.tight_layout()
 plt.savefig("residuals.png",dpi=120) 
-"""
+
